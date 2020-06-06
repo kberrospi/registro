@@ -21,13 +21,14 @@ app.get('/', async (req, res)=>{
         if(err) return res.send('error: ' + err);
         let row ='';
         data.forEach((e)=>{
-            row+= '<td>' + e.name + '</td>' +
+            row+= '<tr><td>' + e.name + '</td>' +
                   '<td>' + e.email + '</td>' +
-                  '<td>' + e.pass + '</td>'
+                  '<td>' + e.pass + '</td></tr>'
         });
-        let html= '<a href="/register">Regitser</a> <table border=1>'
-              +'<thead><th>Nombre</th><th>Email</th><th>Password</th></thead>'
-              +'<tbody><tr>' + row + ' </tr></tbody></table>' 
+        let html= '<a href="/register">Regitser</a>'
+              +'<table border=1>'
+              +'<thead><th>Nombre</th> <th>Email</th> <th>Password</th> </thead>'
+              +'<tbody>' + row + '</tbody></table>' 
 
         res.send(html);
     });
