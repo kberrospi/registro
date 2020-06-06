@@ -21,7 +21,7 @@ app.get('/', async (req, res)=>{
         if(err) return res.send('error: ' + err);
         let row ='';
         data.forEach((e)=>{
-            row+= '<tr><td>' + e.name + '</td>' +
+            row+= '<td>' + e.name + '</td>' +
                   '<td>' + e.email + '</td>' +
                   '<td>' + e.pass + '</td>'
         });
