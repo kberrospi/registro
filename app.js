@@ -26,7 +26,7 @@ app.get('/', async (req, res)=>{
                   '<td>' + e.pass + '</td>'
         });
         let html= '<a href="/register">Regitser</a> <table border=1>'
-              +'<thead><tr><th>Nombre</th><th>Email</th><th>Password</th></td></thead>'
+              +'<thead><tr><th>Nombre</th><th>Email</th><th>Password</th></tr></thead>'
               +'<tbody><tr>' + row + ' </tr></tbody></table>' 
 
         res.send(html);
