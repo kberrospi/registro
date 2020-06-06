@@ -43,7 +43,7 @@ app.get('/register', (req, res)=>{
 
     let formulario = '<form action="/register" method="post"><div><label>Nombre: </label> '
                     + '<input name="cname" id="name" type="text"/></div><div><label>Email:</label>'
-                    + '<input name="cemail" id="name" type="email"></div>'
+                    + '<input name="cemail" id="email" type="email"></div>'
                     + '<div><label>Contraseña:  </label>'
                     + '<input name="cpass" id="password" type="password"></div>'
                     + '<div><button type="submit">Enviar</button></div></form>'
